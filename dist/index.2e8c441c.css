@@ -4,6 +4,73 @@
   --primary-color: #ea638c;
   --secondary-color: #89023e;
   --accent-color: #30343f;
+  --gradient-shadow: linear-gradient(45deg, #590d22, #800f2f, #a4133c, #c9184a, #ff4d6d, #ff758f, #ff8fa3, #ffb3c1, #ffccd5, #fff0fe);
+}
+
+.gradientbody {
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  display: flex;
+}
+
+.gradient {
+  z-index: 1;
+  color: var(--text-color);
+  text-align: center;
+  background: #000;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 100px;
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  position: relative;
+}
+
+.gradient:before {
+  content: "";
+  background: var(--gradient-shadow);
+  z-index: -1;
+  background-size: 300%;
+  border-radius: 15px;
+  width: calc(100% + 16px);
+  height: calc(100% + 16px);
+  animation: 10s ease-in-out infinite animate;
+  position: absolute;
+  top: -8px;
+  left: -8px;
+}
+
+.gradient:after {
+  content: "";
+  background: var(--gradient-shadow);
+  z-index: -2;
+  filter: blur(10px);
+  background-size: 300%;
+  border-radius: 15px;
+  width: calc(100% + 16px);
+  height: calc(100% + 16px);
+  animation: 6s ease-in-out infinite animate;
+  position: absolute;
+  top: -8px;
+  left: -8px;
+}
+
+@keyframes animate {
+  0% {
+    background-position: 0%;
+  }
+
+  50% {
+    background-position: 100%;
+  }
+
+  100% {
+    background-position: 0%;
+  }
 }
 
 * {
