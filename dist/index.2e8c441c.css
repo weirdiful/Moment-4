@@ -22,12 +22,21 @@
   border-radius: 10px;
   justify-content: center;
   align-items: center;
-  width: 200px;
-  height: 100px;
+  width: 250px;
+  height: 150px;
+  padding: 5px;
   font-size: 20px;
   font-weight: bold;
   display: flex;
   position: relative;
+}
+
+.gradient p {
+  background-color: var(--bg-color);
+  border-radius: 10px;
+  margin: 20px;
+  padding: 25px;
+  font-size: 1.5rem;
 }
 
 .gradient:before {
@@ -38,7 +47,7 @@
   border-radius: 15px;
   width: calc(100% + 16px);
   height: calc(100% + 16px);
-  animation: 10s ease-in-out infinite animate;
+  animation: 10s linear infinite animate;
   position: absolute;
   top: -8px;
   left: -8px;
@@ -53,7 +62,7 @@
   border-radius: 15px;
   width: calc(100% + 16px);
   height: calc(100% + 16px);
-  animation: 6s ease-in-out infinite animate;
+  animation: 6s linear infinite animate;
   position: absolute;
   top: -8px;
   left: -8px;
