@@ -343,3 +343,18 @@
     animation-duration: 8s;
     animation-delay: 0.5s;
 }
+
+
+.flower{
+    position: relative;
+}
+
+.flower-spin{
+    transition: transform 5s ease-in-out;
+}
+
+.flower-spin:hover {
+    transform: rotate(360deg);
+}
+
+/

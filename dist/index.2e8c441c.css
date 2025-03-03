@@ -337,6 +337,18 @@
   left: 85%;
 }
 
+.flower {
+  position: relative;
+}
+
+.flower-spin {
+  transition: transform 4s ease-in-out;
+}
+
+.flower-spin:hover {
+  transform: rotate(360deg);
+}
+
 * {
   box-sizing: border-box;
 }
